@@ -15,7 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1643005529708,
+  "id": 14,
+  "iteration": 1643005990325,
   "links": [],
   "panels": [
     {
@@ -598,7 +599,7 @@
         "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": "",
+        "label": "deployment",
         "multi": false,
         "name": "container",
         "options": [],

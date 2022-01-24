@@ -15,12 +15,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 14,
-  "iteration": 1642997426232,
+  "iteration": 1643005529708,
   "links": [],
   "panels": [
     {
-      "datasource": null,
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -103,7 +102,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -184,7 +183,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -265,7 +264,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -346,7 +345,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -427,7 +426,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -593,7 +592,7 @@
           "text": "card-management-service",
           "value": "card-management-service"
         },
-        "datasource": null,
+        "datasource": "prometheus",
         "definition": "label_values(container)",
         "description": null,
         "error": null,
@@ -621,7 +620,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Resolver Success",
+  "title": "Default Dashboard",
   "uid": "UZIiPIb7z",
-  "version": 4
+  "version": 1
 }

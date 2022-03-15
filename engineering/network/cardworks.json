@@ -16,12 +16,11 @@
     "editable": true,
     "gnetId": null,
     "graphTooltip": 0,
-    "id": 15,
     "links": [],
     "panels": [
         {
             "collapsed": false,
-            "datasource": null,
+            "datasource": "prometheus",
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -34,7 +33,7 @@
             "type": "row"
         },
         {
-            "datasource": null,
+            "datasource": "prometheus",
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -72,7 +71,6 @@
                         }
                     },
                     "decimals": 1,
-                    "displayName": "Cardworks probe",
                     "mappings": [
                         {
                             "options": {
@@ -98,14 +96,6 @@
                             {
                                 "color": "green",
                                 "value": null
-                            },
-                            {
-                                "color": "red",
-                                "value": 0
-                            },
-                            {
-                                "color": "green",
-                                "value": 1
                             }
                         ]
                     },
@@ -133,16 +123,17 @@
             "targets": [
                 {
                     "exemplar": true,
-                    "expr": "probe_success{target=\"cardworks-through-fnx-proxy\"}",
+                    "expr": "sum (probe_success{target=\"cardworks-through-fnx-proxy\"})",
                     "interval": "",
-                    "legendFormat": "",
-                    "refId": "A"
+                    "legendFormat": "HTTP probes",
+                    "refId": "HTTP probes"
                 }
             ],
-            "title": "HTTP Probes status",
+            "title": "HTTP Probes",
             "type": "timeseries"
         }
     ],
+    "refresh": "",
     "schemaVersion": 30,
     "style": "dark",
     "tags": [],
@@ -157,5 +148,5 @@
     "timezone": "",
     "title": "Cardworks",
     "uid": "DqShKVP7k",
-    "version": 5
+    "version": 1
 }

@@ -16,7 +16,7 @@
     "editable": true,
     "gnetId": null,
     "graphTooltip": 0,
-    "id": 17,
+    "id": 14,
     "links": [],
     "panels": [
         {
@@ -125,6 +125,14 @@
                     "interval": "",
                     "legendFormat": "VGS proxy TCP probes",
                     "refId": "VGS TCP probes"
+                },
+                {
+                    "exemplar": true,
+                    "expr": "sum (probe_success{target=\"cardworks-through-legacy-network\"})",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "Cardworks through legacy network",
+                    "refId": "cardworks through legacy network"
                 }
             ],
             "title": "Cardworks network reacheability",
@@ -139,12 +147,12 @@
         "list": []
     },
     "time": {
-        "from": "now-1h",
-        "to": "now"
+        "from": "2022-03-16T05:29:11.609Z",
+        "to": "2022-03-16T07:29:11.609Z"
     },
     "timepicker": {},
     "timezone": "",
     "title": "Cardworks reachability",
     "uid": "DqShKVP7kasdfasdf",
-    "version": 6
+    "version": 1
 }

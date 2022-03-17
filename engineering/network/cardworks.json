@@ -139,7 +139,7 @@
             "type": "state-timeline"
         }
     ],
-    "refresh": "",
+    "refresh": "50s",
     "schemaVersion": 30,
     "style": "dark",
     "tags": [],

@@ -137,6 +137,95 @@
             ],
             "title": "Cardworks network reacheability",
             "type": "state-timeline"
+        },
+        {
+            "datasource": "prometheus",
+            "description": "Provides information on the reachability of Honest SFTP",
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "custom": {
+                        "fillOpacity": 70,
+                        "lineWidth": 0
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "0": {
+                                    "color": "red",
+                                    "index": 0,
+                                    "text": " Failed"
+                                },
+                                "1": {
+                                    "color": "green",
+                                    "index": 1,
+                                    "text": " Succeeded"
+                                },
+                                "2": {
+                                    "color": "red",
+                                    "index": 2,
+                                    "text": " Failed"
+                                }
+                            },
+                            "type": "value"
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            }
+                        ]
+                    },
+                    "unit": "bool"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 9,
+                "w": 23,
+                "x": 0,
+                "y": 10
+            },
+            "id": 5,
+            "options": {
+                "alignValue": "left",
+                "legend": {
+                    "displayMode": "list",
+                    "placement": "bottom"
+                },
+                "mergeValues": true,
+                "rowHeight": 0.9,
+                "showValue": "auto",
+                "tooltip": {
+                    "mode": "single"
+                }
+            },
+            "targets": [
+                {
+                    "exemplar": true,
+                    "expr": "sum (probe_success{target=\"sftp-tcp-level-through-fnx\"})",
+                    "interval": "",
+                    "legendFormat": "TCP probles through proxy",
+                    "refId": "TCP through proxy"
+                },
+                {
+                    "exemplar": true,
+                    "expr": "sum (probe_success{target=\"sftp-tcp-level-dns\"})",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "TCP probes to resolved DNS",
+                    "refId": "TCP probes to resolved DNS"
+                }
+            ],
+            "title": "Honest SFTP",
+            "type": "state-timeline"
         }
     ],
     "refresh": "5s",
@@ -152,7 +241,7 @@
     },
     "timepicker": {},
     "timezone": "",
-    "title": "Cardworks reachability",
+    "title": "Finexus / Cardworks / SFTP",
     "uid": "DqShKVP7kasdfasdf",
     "version": 1
 }

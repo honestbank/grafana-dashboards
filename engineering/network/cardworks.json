@@ -105,9 +105,16 @@
             "targets": [
                 {
                     "exemplar": true,
+                    "expr": "sum (probe_success{target=\"cardworks-through-vgs-proxy-http\"})",
+                    "interval": "",
+                    "legendFormat": "Cardworks HTTP probes through VGS proxy",
+                    "refId": "HTTP probes through VGS proxy"
+                },
+                {
+                    "exemplar": true,
                     "expr": "sum (probe_success{target=\"cardworks-through-fnx-proxy\"})",
                     "interval": "",
-                    "legendFormat": "Cardworks HTTP probes",
+                    "legendFormat": "Cardworks HTTP probes through Peplink VPN",
                     "refId": "HTTP probes"
                 },
                 {
@@ -115,7 +122,7 @@
                     "expr": "sum (probe_success{target=\"cardworks-through-fnx-proxy-tcp\"})",
                     "hide": false,
                     "interval": "",
-                    "legendFormat": "Cardworks TCP probes",
+                    "legendFormat": "Cardworks TCP probes through Peplink VPN",
                     "refId": "TCP probes"
                 },
                 {
@@ -125,14 +132,6 @@
                     "interval": "",
                     "legendFormat": "VGS proxy TCP probes",
                     "refId": "VGS TCP probes"
-                },
-                {
-                    "exemplar": true,
-                    "expr": "sum (probe_success{target=\"cardworks-through-legacy-network\"})",
-                    "hide": false,
-                    "interval": "",
-                    "legendFormat": "Cardworks through legacy network",
-                    "refId": "cardworks through legacy network"
                 }
             ],
             "title": "Cardworks network reacheability",
